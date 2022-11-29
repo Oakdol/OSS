@@ -18,4 +18,143 @@
     
 ## 사용법
   ### 1. 헤더(머릿말)
-    - 문장 앞에 '#'을 넣어서 사용. '#'의 갯수에 따라 글자의 크기가 달라지며, 사용시 '#'표시 사용 후 한칸 띄고 사용해야 함. 6개 까지 지원.
+    - 문장 앞에 '#'을 넣어서 사용. '#'의 갯수에 따라 글자의 크기가 달라지며, 사용시 '#'표시 사용 후 한칸 띄고 사용해야 함. 6개 까지 지원.  
+# 1개
+## 2개
+### 3개
+#### 4개
+##### 5개
+###### 6개
+####### 7개
+  ### 2. Block Quote
+    - 이메일에서 사용하는 > 블럭인용문자를 이용한다.
+> 인용문자 1개
+>	> 인용문자 2개
+>	>	> 인용문자 3개
+
+## 2. 목록
+  ### 순서O
+    - 순서가 있는 목록은 숫자와 점을 사용한다.
+1. 첫번째
+2. 두번째
+3. 세번째
+  ### 순서X
+    - 순서가 없는 목록은 '+', '-', '*' 를 이용한다. 세 기호 모두 결과는 같다. 혼합해서 사용도 가능하다.
+* `*`사용
+  + 들여쓰기 후 `+`사용
+    - 두 번 들여쓰기 후 `-`사용  
+## 3. 코드
+4개의 공백 또는 하나의 탭으로 들여쓰기를 만나면 변환되기 시작하여 들여쓰지 않은 행을 만날때까지 변환이 계속된다.
+
+### 들여쓰기
+```
+This is a normal paragraph:
+
+    This is a code block.
+    
+end code block.
+```
+
+실제로 적용해보면,
+
+적용예:
+
+*****
+This is a normal paragraph:
+
+    This is a code block.
+
+end code block.
+*****
+
+> 한줄 띄어쓰지 않으면 인식이 제대로 안되는 문제가 발생한다.
+
+```
+This is a normal paragraph:
+    This is a code block.
+end code block.
+```
+
+적용예:
+
+*****
+This is a normal paragraph:
+    This is a code block.
+end code block.
+*****
+
+## 3.1 코드블럭
+코드블럭은 다음과 같이 2가지 방식을 사용할 수 있다:
+
+* `<pre><code> {code} </code></pre>` 이용방식
+
+```
+<pre>
+<code>
+public class BootSpringBootApplication {
+  public static void main(String[] args) {
+    System.out.println("Hello, Honeymon");
+  }
+
+}
+</code>
+</pre>
+```
+
+<pre>
+<code>
+public class BootSpringBootApplication {
+  public static void main(String[] args) {
+    System.out.println("Hello, Honeymon");
+  }
+}
+</code>
+</pre>
+
+* 코드블럭코드("\```") 을 이용하는 방법
+
+<pre>
+<code>
+```
+public class BootSpringBootApplication {
+  public static void main(String[] args) {
+    System.out.println("Hello, Honeymon");
+  }
+}
+```
+</code>
+</pre>
+
+```
+public class BootSpringBootApplication {
+  public static void main(String[] args) {
+    System.out.println("Hello, Honeymon");
+  }
+}
+```
+
+**Github**에서는 코드블럭코드("\```") 시작점에 사용하는 언어를 선언하여 [문법강조(Syntax highlighting)](https://docs.github.com/en/github/writing-on-github/creating-and-highlighting-code-blocks#syntax-highlighting)이 가능하다.
+
+<pre>
+<code>
+```java
+public class BootSpringBootApplication {
+  public static void main(String[] args) {
+    System.out.println("Hello, Honeymon");
+  }
+}
+```
+</code>
+</pre>
+
+```java
+public class BootSpringBootApplication {
+  public static void main(String[] args) {
+    System.out.println("Hello, Honeymon");
+  }
+}
+```
+
+
+## 2.5. 수평선 ```<hr/>```
+아래 줄은 모두 수평선을 만든다. 마크다운 문서를 미리보기로 출력할 때 *페이지 나누기* 용도로 많이 사용한다.
